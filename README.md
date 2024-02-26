@@ -1,4 +1,4 @@
-HW 3
+## HW 3
 
 Cloud-bastion
 
@@ -34,3 +34,21 @@ Host someinternalhost
 HostName 10.128.0.4 
 User appuser 
 ProxyJump appuser@51.250.15.65
+
+## HW4
+
+cloud-testapp
+
+testapp_IP = 158.160.61.245
+testapp_port = 9292
+
+yc command
+
+yc compute instance create
+--name reddit-app
+--hostname reddit-app
+--memory=4
+--create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB
+--network-interface subnet-name=subnet,nat-ip-version=ipv4
+----metadata-from-file user-data=startup.yaml
+--metadata serial-port-enable=1
