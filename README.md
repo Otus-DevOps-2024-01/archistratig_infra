@@ -51,5 +51,5 @@ yc compute instance create \
 --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-
 lts,size=10GB \
 --network-interface subnet-name=subnet,nat-ip-version=ipv4 \
+--metadata-from-file user-data=startup.yaml
 --metadata serial-port-enable=1 \
---ssh-key ~/.ssh/appuser.pub
