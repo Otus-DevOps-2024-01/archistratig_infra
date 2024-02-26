@@ -44,15 +44,12 @@ testapp_port = 9292
 
 yc command
 
-yc compute instance create
---name reddit-app
---hostname reddit-app
---memory=4
---create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB
---network-interface subnet-name=subnet,nat-ip-version=ipv4
-----metadata-from-file user-data=startup.yaml
-<<<<<<< HEAD
---metadata serial-port-enable=1
-=======
---metadata serial-port-enable=1
->>>>>>> 3298a1430c4e96ca2e5c579cfa4ec5ef9d07b915
+yc compute instance create \
+--name reddit-app \
+--hostname reddit-app \
+--memory=4 \
+--create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-
+lts,size=10GB \
+--network-interface subnet-name=subnet,nat-ip-version=ipv4 \
+--metadata serial-port-enable=1 \
+--ssh-key ~/.ssh/appuser.pub
