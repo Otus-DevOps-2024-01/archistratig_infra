@@ -7,6 +7,4 @@ sudo apt-get update && sudo apt-get install -y mongodb-org && sudo systemctl unm
 sudo mkdir -p /data/db
 sudo chown -R `id -u` /data/db
 sudo chmod -R go+w /data/db
-sudo chown -R `id -u` /tmp/mongodb-27017.sock
 sudo systemctl start mongod && systemctl enable --now mongod
-mongod
