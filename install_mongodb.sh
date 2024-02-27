@@ -14,4 +14,4 @@ sudo echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/m
 sudo apt-get update && sudo apt-get install -y mongodb-org && sudo systemctl unmask mongod
 sudo systemctl enable mongod.service
 sudo systemctl start mongod && sudo service mongodb start &&  sudo systemctl enable mongod
-mongo
+mongod --fork --logpath /var/log/mongodb.log --auth --port 27017 --dbpath /var/lib/mongodb/admin
