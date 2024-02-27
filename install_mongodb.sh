@@ -6,4 +6,6 @@ sudo echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/m
 sudo apt-get update
 sudo apt-get install -y mongodb-org
 sudo systemctl start mongod
+mongo --eval 'db.runCommand({ connectionStatus: 1 })'
+sudo ss -pnltu | grep 27017
 sudo systemctl enable mongod
