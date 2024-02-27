@@ -9,4 +9,5 @@ sudo mkdir -p /home/mongodb
 sudo chmod 777 /home/mongodb
 sudo apt-get update && sudo apt-get install -y mongodb-org sudo && systemctl unmask mongod
 sudo systemctl start mongod &&  sudo systemctl enable mongod 
+mongod
 mongo --eval 'db.runCommand({ connectionStatus: 1 })'
