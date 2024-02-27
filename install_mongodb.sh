@@ -9,3 +9,4 @@ sudo chown -R `id -u` /data/db
 sudo chmod -R go+w /data/db
 sudo chown -R `id -u` /tmp/mongodb-27017.sock
 sudo systemctl start mongod && systemctl enable --now mongod
+mongod
