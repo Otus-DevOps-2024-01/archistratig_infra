@@ -10,5 +10,6 @@ sudo chmod -R go+w /data/db
 sudo touch /data/db/mongod.lock
 sudo chmod 0777 /data/db/mongd.lock
 sudo systemctl start mongod && systemctl enable --now mongod
+mongod
 
 
