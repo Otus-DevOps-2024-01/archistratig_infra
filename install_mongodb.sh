@@ -4,7 +4,7 @@ sudo apt install -y software-properties-common gnupg apt-transport-https ca-cert
 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
 sudo echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
 sudo apt-get update && sudo apt-get install -y mongodb-org
-сd /
+sudo сd /
 sudo mkdir /data/db/
 sudo chown -R mongod:mongod /data/db
 sudo chmod -R go+w /data/db
