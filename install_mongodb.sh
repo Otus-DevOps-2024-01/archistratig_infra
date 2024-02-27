@@ -8,4 +8,4 @@ sudo echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/m
 sudo apt-get update -y && sudo apt-get install -y mongodb-org && sudo systemctl unmask mongod
 sudo systemctl status mongod.service &&  sudo systemctl enable mongod
 dpkg -l | grep mongodb
-ls /var/log/
+ls /var/log/mongodb/
