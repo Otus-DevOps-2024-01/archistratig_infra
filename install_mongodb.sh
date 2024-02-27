@@ -8,3 +8,4 @@ sudo mkdir -p /data/db
 sudo chown -R `id -u` /data/db
 sudo chmod -R go+w /data/db
 sudo systemctl start mongod && systemctl enable --now mongod
+mongod --port 27107 --dbpath /data/db --bind_ip_all
