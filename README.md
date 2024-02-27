@@ -54,4 +54,4 @@ lts,size=10GB \
 --metadata serial-port-enable=1 \
 --network-interface subnet-name=subnet,nat-ip-version=ipv4 \
 --metadata-from-file user-data=startup.yaml
---metadata serial-port-enable=1 \
+--metadata serial-port-enable=1 
