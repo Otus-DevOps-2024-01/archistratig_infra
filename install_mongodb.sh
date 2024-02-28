@@ -18,3 +18,4 @@ sudo echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/m
 sudo apt-get update && sudo apt-get install -y mongodb-org
 sudo systemctl start mongod.service && sudo systemctl enable mongod.service&& sudo systemctl status mongod.service
 cat /var/lib/mongodb/mongodb.log
+sudo nano /var/log/mongodb/mongod.log | grep "ERROR: child process failed, exited with error number 1"
