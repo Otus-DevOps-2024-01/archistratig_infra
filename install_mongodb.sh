@@ -1,4 +1,5 @@
 #!/bin/bash
+dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
 sudo apt-get install dbus -y
 sudo apt-get install --reinstall dbus
 systemctl start dbus
