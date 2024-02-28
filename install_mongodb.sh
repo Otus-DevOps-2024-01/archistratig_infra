@@ -22,3 +22,5 @@ sudo systemctl start mongod && sudo systemctl enable mongod && sudo systemctl st
 cat /var/lib/mongodb/mongodb.log
 sudo nano /var/log/mongodb/mongod.log | grep "ERROR: child process failed, exited with error number 1"
 journalctl -xe
+sudo rm -rf /tmp/mongodb-27017.sock
+sudo systemctl restart mongod
