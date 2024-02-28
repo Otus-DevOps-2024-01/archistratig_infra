@@ -3,6 +3,7 @@ sudo apt-get install dbus -y
 sudo apt-get install --reinstall dbus
 systemctl start dbus
 sudo apt install --reinstall libpam-systemd -y
+sudo apt install nano -y
 sudo systemctl start dbus
 sudo apt-get install dbus-daemon
 dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
