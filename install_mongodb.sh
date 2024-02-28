@@ -24,4 +24,4 @@ sudo nano /var/log/mongodb/mongod.log | grep "ERROR: child process failed, exite
 journalctl -xe
 sudo rm -rf /tmp/mongodb-27017.sock
 sudo systemctl restart mongod
-mongod
+mongod --bind_ip_all
