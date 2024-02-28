@@ -4,7 +4,7 @@ sudo apt-get install --reinstall dbus
 systemctl start dbus
 sudo apt install --reinstall libpam-systemd -y
 sudo systemctl start dbus
-sudo apt-get install dbus-daemon-1
+sudo apt-get install dbus-daemon
 dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
 ps aux
 sudo apt install -y software-properties-common gnupg curl apt-transport-https ca-certificates
