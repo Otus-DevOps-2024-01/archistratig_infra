@@ -7,6 +7,7 @@ sudo systemctl start dbus
 sudo apt-get install dbus-daemon
 dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
 ps aux
+/etc/init.d/dbus start
 sudo systemctl list-units --type=service
 sudo apt install -y software-properties-common gnupg curl apt-transport-https ca-certificates
 sudo wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add - && \
