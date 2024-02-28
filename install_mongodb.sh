@@ -21,3 +21,4 @@ sudo apt-get update && sudo apt-get install -y mongodb-org
 sudo systemctl start mongod && sudo systemctl enable mongod && sudo systemctl status mongod
 cat /var/lib/mongodb/mongodb.log
 sudo nano /var/log/mongodb/mongod.log | grep "ERROR: child process failed, exited with error number 1"
+journalctl -xe
