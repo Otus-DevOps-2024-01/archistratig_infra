@@ -11,7 +11,6 @@ ps aux
 sudo mkdir -p /data/db
 sudo chown -R `id -u` /data/db
 sudo chmod -R go+w /data/db
-/etc/init.d/dbus start
 sudo systemctl list-units --type=service
 sudo apt install -y software-properties-common gnupg curl apt-transport-https ca-certificates
 sudo wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add - && \
