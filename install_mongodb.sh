@@ -19,7 +19,8 @@ sudo wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key
 sudo echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list && \
 sudo apt-get update
 sudo apt-get install -y mongodb-org
-sudo systemctl start mongod
-sudo systemctl enable mongod
-sudo systemctl status mongod
-
+sudo systemctl daemon-reload
+sudo systemctl enable mongod.service
+systemctl start mongod.service
+systemctl status mongod.service
+sudo systemctl --type=service --state=active | grep mongod
