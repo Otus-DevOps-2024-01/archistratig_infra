@@ -39,7 +39,7 @@ ProxyJump appuser@51.250.15.65
 
 cloud-testapp
 
-testapp_IP = 51.250.3.192
+testapp_IP = 158.160.47.148
 testapp_port = 9292
 
 yc command
