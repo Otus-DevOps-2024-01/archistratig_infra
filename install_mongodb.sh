@@ -17,11 +17,12 @@ sudo systemctl list-units --type=service
 sudo apt install -y software-properties-common gnupg curl apt-transport-https ca-certificates
 sudo wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add - && \
 sudo echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list && \
-sudo apt-get update && sudo apt-get install -y mongodb-org
-sudo systemctl start mongod && sudo systemctl enable mongod && sudo systemctl status mongod
-cat /var/lib/mongodb/mongodb.log
-sudo nano /var/log/mongodb/mongod.log | grep "ERROR: child process failed, exited with error number 1"
-journalctl -xe
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+/etc/init.d/mongod start
+sudo systemctl start mongod
+sudo systemctl enable mongod
+sudo systemctl status mongod
 sudo rm -rf /tmp/mongodb-27017.sock
 sudo systemctl restart mongod
 mongod --bind_ip_all
