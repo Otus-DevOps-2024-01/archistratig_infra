@@ -55,3 +55,9 @@ lts,size=10GB \
 --network-interface subnet-name=subnet,nat-ip-version=ipv4 \
 --metadata-from-file user-data=startup.yaml
 --metadata serial-port-enable=1 
+
+
+## HW5 
+
+Create boot disk with Packer. Get boot disk for VM. Use variables to create template for creating VM: packer validate -var-file=variables.json ubuntu16.json packer build -var-file=variables.json ubuntu16.json.
+Create scripe for 'bake' create-reddit-vm.sh: packer validate -var-file=variables.json immutable.json packer build -var-file=variables.json immutable.json.
