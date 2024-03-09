@@ -1,7 +1,7 @@
 {
   "folder_id": "bawdawdawdawdawda8",
   "source_image_family": "ubuntu-1604-lts",
-  "service_account_key_file": "/files/key.json",
+  "service_account_key_file": "packer/files/key.json",
   "service_account_id": "svc",
   "source_image_folder_id": "awdawdawedawdaw231"
 }
