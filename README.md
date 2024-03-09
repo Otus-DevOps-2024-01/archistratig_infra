@@ -61,3 +61,7 @@ lts,size=10GB \
 
 Create boot disk with Packer. Get boot disk for VM. Use variables to create template for creating VM: packer validate -var-file=variables.json ubuntu16.json packer build -var-file=variables.json ubuntu16.json.
 Create scripe for 'bake' create-reddit-vm.sh: packer validate -var-file=variables.json immutable.json packer build -var-file=variables.json immutable.json.
+
+## HW6
+
+Create VM from configuration. Create input variable for secret key, network zone and do terraform fmt. Create .gitignore and disable from pushing files with extensions .tf.
