@@ -1,8 +1,0 @@
-cloud_id                 = "b1g0ud62an1kac6enol7"
-folder_id                = "b1gsehuuljmk3t2negr8"
-zone                     = "ru-central1-a"
-image_id                 = "fd8a5hul46n8gdn9uv5o"
-public_key_path          = "~/.ssh/appuser.pub"
-subnet_id                = "e9bihto2tgga1haqhpp8"
-service_account_key_file = "/home/un1xoid/otus-devops/terraform/key.json"
-secret_key_path          = "~/.ssh/appuser"
