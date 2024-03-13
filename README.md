@@ -65,3 +65,12 @@ Create scripe for 'bake' create-reddit-vm.sh: packer validate -var-file=variable
 ## HW6
 
 Create VM from configuration. Create input variable for secret key, network zone and do terraform fmt. Create .gitignore and disable from pushing files with extensions .tf.
+
+## HW7
+
+ 1. Create 2 virtual machine disk images: one with mongod and another with ruby (db.json and app.json)
+ 2. Split configuration file main.tf for using modules like app.tf and db.tf:
+ 3. Copy files app.tf and db.tf in folders: moludes/app and moludes/db and rename this files in main.tf. Create files: variables.tf and outputs.tf.
+ 4. Use terrform get to connect modules.
+ 5. Create folders: stage and prod. Copy main.tf, variables.tf, outputs.tf, terraform.tfvars, key.json into this folder.
+ 6. Edit paths to modules in main.tf.
