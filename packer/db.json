@@ -1,6 +1,7 @@
-"provisioners": [
+{"provisioners": [
 {
 "type": "ansible",
 "playbook_file": "ansible/packer_db.yml"
 }
 ]
+}
