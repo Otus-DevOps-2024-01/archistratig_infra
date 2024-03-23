@@ -74,3 +74,27 @@ Create VM from configuration. Create input variable for secret key, network zone
  4. Use terrform get to connect modules.
  5. Create folders: stage and prod. Copy main.tf, variables.tf, outputs.tf, terraform.tfvars, key.json into this folder.
  6. Edit paths to modules in main.tf.
+ 
+ ## HW8
+ 1. Create inventory.yml
+ 
+ app:
+  hosts:
+    appserver:
+      ansible_host: 158.160.127.51
+
+db:
+  hosts:
+    dbserver:
+      ansible_host: 51.250.1.175
+      
+ 2. Create playbook clone.yml
+ - name: Clone
+hosts: app
+tasks:
+- name: Clone repo
+git:
+repo: https://github.com/express42/reddit.git
+dest: /home/appuser/reddit
+ 3. Use command 'ansible-playbook clone.yml' and delete ~/reddit with command:ansible app -m command -a 'rm -rf ~/reddit'
+ 
