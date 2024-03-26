@@ -75,7 +75,7 @@ Create VM from configuration. Create input variable for secret key, network zone
  5. Create folders: stage and prod. Copy main.tf, variables.tf, outputs.tf, terraform.tfvars, key.json into this folder.
  6. Edit paths to modules in main.tf.
  
- ## HW8
+## HW8
  1. Create inventory.yml
  
  app:
@@ -98,3 +98,40 @@ repo: https://github.com/express42/reddit.git
 dest: /home/appuser/reddit
  3. Use command 'ansible-playbook clone.yml' and delete ~/reddit with command:ansible app -m command -a 'rm -rf ~/reddit'
  
+## HW9
+
+1. Create playbook for db, app and deploy in 1 scenary: reddit_app_one_play.yml
+2. Create playbook for db, app and deploy in 3 scenaries: reddit_app_multiple_plays.yml
+3. Create 3 playbooks for db, app and deploy and main playbook:
+	app.yml
+	db.yml
+	deploy.yml
+	
+Main playbook:
+site.yml :
+---
+- import_playbook: db.yml
+- import_playbook: app.yml
+- import_playbook: deploy.yml
+
+4. Create playbook for install ruby and bundler in app and mongodb in db for provisioning in Packer:
+	packer_app.yml - install ruby and bundler
+	packer_db.yml - install mongodb
+
+5. Provisioning in Packer using playbooks:
+app.json:
+"provisioners": [
+{
+"type": "ansible",
+"playbook_file": "ansible/packer_app.yml"
+}
+]
+db.json:
+"provisioners": [
+{
+"type": "ansible",
+"playbook_file": "ansible/packer_db.yml"
+}
+]
+
+
