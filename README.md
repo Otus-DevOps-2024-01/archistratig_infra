@@ -135,3 +135,10 @@ db.json:
 ]
 
 
+
+## HW10
+
+1. Move playbooks ins a roles
+2. Create PROD and Stage environments
+3. Create community role for nginx
+4. Use Ansible-vault
